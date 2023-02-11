@@ -7,7 +7,21 @@ manifest:
   projects:
     - name: zmk
       remote: urob
-      revision: main
+      #revision: main
+      revision: adv360-led
+      import: app/west.yml
+  self:
+    path: config
+
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob
+  projects:
+    - name: zmk
+      remote: urob
       import: app/west.yml
   self:
     path: config
