@@ -364,7 +364,7 @@ ZMK_LAYER(xcode,
 
 // X_LH :    |           |           |            |           | ......  |        |          |        |        |         |
 //    &mo SYS   &kp GRAVE    &kp CAPS    &kp LEFT     &kp RIGHT             &kp UP   &kp DOWN    LBKT    RBKT     &mo SYS
-    &mo SYS   &kp LG(GRAVE)    &kp CAPS    &kp LEFT     &kp RIGHT             &kp LG(LS(LBKT))   &kp LG(LS(RBKT))    LBKT    RBKT     &mo SYS
+    &mo SYS   &kp LG(GRAVE)    &kp CAPS    &kp LEFT     &kp RIGHT             &kp LG(LS(LBKT))   &kp LG(LS(RBKT))    &kp LBKT    &kp RBKT     &mo SYS
                                              &kp LCTRL    &kp LALT    &kp LGUI   &kp RCTRL  
                                     ___           ___     &kp HOME    &kp PG_UP  ___           ___       
                                                           &kp END     &kp PG_DN
