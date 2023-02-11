@@ -348,13 +348,13 @@ ZMK_LAYER(mouse,
 
 ZMK_LAYER(xcode,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           ___         ___           ___           ___               X_MT     ___           ___           U_WH_U         ___          ___             X_RT
+    X_LT     ___           ___         ___           ___           ___               X_MT     ___           ___           ___            ___          ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     ___           ___           ___           ___           ___             X_MM     ___           ___           U_WH_D         ___          ___             X_RM
+    X_LM     ___           ___           ___           ___           ___             X_MM     ___           LC(LG(LEFT))  LC(LG(RIGHT)) ds ___          ___             X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp LA(LG(GRAVE)) ___           ___           ___           ___         X_MB     ___           ___           ___            ___          ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     &kp LG(LS(LBKT)) &kp LG(LS(RBKT))                                       X_RH
+//    X_LH                                               ___           ___             X_MH     &kp LG(LS(LBKT)) &kp LG(LS(RBKT))                                       X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 
 // #define X_LH    &mo SYS &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT     &kp UP &kp DOWN U_WH_D U_WH_U &mo SYS \
@@ -362,14 +362,11 @@ ZMK_LAYER(xcode,
 // #define X_MH    &kp HOME    &kp PG_UP
 // #define X_RH    &kp END     &kp PG_DN
 
-// X_LH :    |           |           |            |           | ......  |        |          |        |        |         |           |            |          |
-    &mo SYS   &kp GRAVE    &kp CAPS    &kp LEFT     &kp RIGHT             &kp UP   &kp DOWN   U_WH_D   U_WH_U   &mo SYS
-    &kp LCTRL    &kp LALT    &kp LGUI   &kp RCTRL   ___           ___     &kp HOME    &kp PG_UP  ___           ___       &kp END     &kp PG_DN
-
-// X_MH :     |
-
-// X_RH :     |
-)
-
+// X_LH :    |           |           |            |           | ......  |        |          |        |        |         |
+//    &mo SYS   &kp GRAVE    &kp CAPS    &kp LEFT     &kp RIGHT             &kp UP   &kp DOWN    LBKT    RBKT     &mo SYS
+    &mo SYS   &kp LG(GRAVE)    &kp CAPS    &kp LEFT     &kp RIGHT             &kp LG(LS(LBKT))   &kp LG(LS(RBKT))    LBKT    RBKT     &mo SYS
+                                             &kp LCTRL    &kp LALT    &kp LGUI   &kp RCTRL  
+                                    ___           ___     &kp HOME    &kp PG_UP  ___           ___       
+                                                          &kp END     &kp PG_DN
 
 /* vim: set ft=cpp tw=174: */
