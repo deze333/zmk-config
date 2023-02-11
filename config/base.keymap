@@ -368,5 +368,6 @@ ZMK_LAYER(xcode,
                                              &kp LCTRL    &kp LALT    &kp LGUI   &kp RCTRL  
                                     ___           ___     &kp HOME    &kp PG_UP  ___           ___       
                                                           &kp END     &kp PG_DN
+)
 
 /* vim: set ft=cpp tw=174: */
